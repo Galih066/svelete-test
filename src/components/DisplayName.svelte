@@ -2,12 +2,13 @@
     const name = "Svelte";
     const src = "https://picsum.photos/200/300";
     const alt = "Svelte logo";
-    let firstName = $state('Galeh');
-    let lastName = $state('Imanda');
+    let firstName = $state('');
+    let lastName = $state('');
     const fullName = $derived.by(() => {
+        console.log('Fullname derived')
         return `${firstName} ${lastName}`;
     });
-    let defaultName = $state('Galeh Imanda');
+    let defaultName = $state('');
 </script>
 
 <!-- <img {src} {alt}/> -->
